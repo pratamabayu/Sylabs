@@ -1,0 +1,1 @@
+﻿1.	Deferred-LightingEffect, use filterSize in int or float, need more testing

@@ -1,0 +1,6 @@
+*packages
+*.DS_Store
+*.suo
+*.user
+bin
+obj

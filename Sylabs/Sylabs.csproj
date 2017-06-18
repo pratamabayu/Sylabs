@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E0079CC-6F15-42AC-9F17-4E8AD7B951AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Sylabs</RootNamespace>
+    <AssemblyName>Sylabs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Sylabs.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="GlslOptimizerSharp">
+      <HintPath>..\References\GlslOptimizerSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShaderBuilder.cs" />
+    <Compile Include="ShaderMetadata.cs" />
+    <Compile Include="ShaderParser.cs" />
+    <Compile Include="ShaderTranslator.cs" />
+    <Compile Include="ShaderVersion.cs" />
+    <Compile Include="StringBuilderExtensions.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="Translating\DataType.cs" />
+    <Compile Include="Translating\GlslEs_100_Translator.cs" />
+    <Compile Include="Translating\Glsl_120_Translator.cs" />
+    <Compile Include="Translating\HlslTranslator.cs" />
+    <Compile Include="Translating\Hlsl_3_0_Translator.cs" />
+    <Compile Include="Translating\Hlsl_4_0_Translator.cs" />
+    <Compile Include="Translating\Hlsl_4_0_level_9_1_Translator.cs" />
+    <Compile Include="Translating\Hlsl_4_0_level_9_3_Translator.cs" />
+    <Compile Include="Translating\Hlsl_5_0_Translator.cs" />
+    <Compile Include="Translating\ShaderHelper.cs" />
+    <Compile Include="Translating\VariableCache.cs" />
+    <Compile Include="Translating\VertexShaderAttribute.cs" />
+    <Compile Include="Translating\Description\ConstantDescription.cs" />
+    <Compile Include="Translating\Description\ElementDescription.cs" />
+    <Compile Include="Translating\Description\PassDescription.cs" />
+    <Compile Include="Translating\Description\ResourceDescription.cs" />
+    <Compile Include="Translating\Description\SamplerDescription.cs" />
+    <Compile Include="Translating\Description\TechniqueDescription.cs" />
+    <Compile Include="Parsing\ParserException.cs" />
+    <Compile Include="Parsing\ParserExtensions.cs" />
+    <Compile Include="Parsing\Symbol.cs" />
+    <Compile Include="Parsing\Arithmetic\DigitSequence.cs" />
+    <Compile Include="Parsing\Arithmetic\Expression.cs" />
+    <Compile Include="Parsing\Arithmetic\Formula.cs" />
+    <Compile Include="Parsing\Arithmetic\FractionalPart.cs" />
+    <Compile Include="Parsing\Arithmetic\InfixOperator.cs" />
+    <Compile Include="Parsing\Arithmetic\NegSign.cs" />
+    <Compile Include="Parsing\Arithmetic\NospaceExpression.cs" />
+    <Compile Include="Parsing\Arithmetic\NumericalConstant.cs" />
+    <Compile Include="Parsing\Arithmetic\PrefixOperator.cs" />
+    <Compile Include="Parsing\Arithmetic\SignificandPart.cs" />
+    <Compile Include="Parsing\Arithmetic\WholeNumberPart.cs" />
+    <Compile Include="Parsing\Effect\ArgumentExpression.cs" />
+    <Compile Include="Parsing\Effect\CompileExpression.cs" />
+    <Compile Include="Parsing\Effect\ConstantExpression.cs" />
+    <Compile Include="Parsing\Effect\FunctionExpression.cs" />
+    <Compile Include="Parsing\Effect\PassExpression.cs" />
+    <Compile Include="Parsing\Effect\ResourceExpression.cs" />
+    <Compile Include="Parsing\Effect\SamplerExpression.cs" />
+    <Compile Include="Parsing\Effect\Script.cs" />
+    <Compile Include="Parsing\Effect\ScriptExpression.cs" />
+    <Compile Include="Parsing\Effect\StructExpression.cs" />
+    <Compile Include="Parsing\Effect\TechniqueExpression.cs" />
+    <Compile Include="Parsing\Effect\TextPart.cs" />
+    <Compile Include="Parsing\Effect\Statement\ProcedureExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\StatementBlockExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\StatementExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\StructStatementBlockExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\StructStatementExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\Flow Control\BreakStatementExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\Flow Control\ClipStatementExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\Flow Control\ContinueStatementExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\Flow Control\DiscardStatementExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\Flow Control\ForHeaderExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\Flow Control\ForStatementExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\Flow Control\IfHeaderExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\Flow Control\IfStatementExpression.cs" />
+    <Compile Include="Parsing\Effect\Statement\Flow Control\ReturnStatementExpression.cs" />
+    <Compile Include="Parsing\Primitives\Ampersand.cs" />
+    <Compile Include="Parsing\Primitives\Asterisk.cs" />
+    <Compile Include="Parsing\Primitives\Caret.cs" />
+    <Compile Include="Parsing\Primitives\Character.cs" />
+    <Compile Include="Parsing\Primitives\CloseCurlyBracket.cs" />
+    <Compile Include="Parsing\Primitives\CloseRoundBracket.cs" />
+    <Compile Include="Parsing\Primitives\CloseSquareBracket.cs" />
+    <Compile Include="Parsing\Primitives\Colon.cs" />
+    <Compile Include="Parsing\Primitives\Comma.cs" />
+    <Compile Include="Parsing\Primitives\DecimalDigit.cs" />
+    <Compile Include="Parsing\Primitives\Equals.cs" />
+    <Compile Include="Parsing\Primitives\ExclamationMark.cs" />
+    <Compile Include="Parsing\Primitives\ForwardSlash.cs" />
+    <Compile Include="Parsing\Primitives\FullStop.cs" />
+    <Compile Include="Parsing\Primitives\GreaterThan.cs" />
+    <Compile Include="Parsing\Primitives\LessThan.cs" />
+    <Compile Include="Parsing\Primitives\Minus.cs" />
+    <Compile Include="Parsing\Primitives\NewLine.cs" />
+    <Compile Include="Parsing\Primitives\OpenCurlyBracket.cs" />
+    <Compile Include="Parsing\Primitives\OpenRoundBracket.cs" />
+    <Compile Include="Parsing\Primitives\OpenSquareBracket.cs" />
+    <Compile Include="Parsing\Primitives\Plus.cs" />
+    <Compile Include="Parsing\Primitives\Procenttecken.cs" />
+    <Compile Include="Parsing\Primitives\Semicolon.cs" />
+    <Compile Include="Parsing\Primitives\Tabulation.cs" />
+    <Compile Include="Parsing\Primitives\VerticalBar.cs" />
+    <Compile Include="Parsing\Primitives\WhiteSpace.cs" />
+    <Compile Include="Optimizer\GlslOptimizer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Note.txt" />
+    <None Include="Sylabs.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

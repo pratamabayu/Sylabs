@@ -1,0 +1,15 @@
+﻿1.	saturate(a) procedure. "a" can be float, float2, float3, or float4 data type.
+	In glsl those procedure will be convert to clamp(a, b, c), where b and c are range and a, b, and c are same data type.
+	So take care about these in conversion hlsl to glsl.
+2.	lerp(a, b, c) procedure. a and b are same type float, float2, float3, or float4 data type, and c is always float data type.
+	In glsl those procedure will be convert to mix(a, b, c).
+	So take care about these in conversion hlsl to glsl.
+3.  Check what float2, float3, float4, and float4x4 in HLSL and vec2, vec3, vec4, and mat4 data type constructors. Same these.
+4. 	In GLSL array index must be static or direct variable value, not indirect variable like "input.BoneIndices.y"
+5.  In GLSL variable from semantics and derived-property like .r, .g, .b, .a, .rg, .rgb, .rgba, and
+	.x, .y, .z, .w, .xy, .xyz, .xyzw is readonly. The solution is make copy to a local variable and do something calculation
+6.	Don't use "output" as variable name for non semantic data type, cause "output" is keyword (reserved) in GLSL
+7.	Sometimes in GLSLES if optimize mode was activated when compiled, notify error such "could not implicitly convert operands to arithmatic operator",
+	the culprit is "glsl_optimizer"
+7.	If shader is fail compiling to GLSLES in optimize mode and works in GLSL optimize mode, so in GLSLES disable optmize mode
+8.	In GLSLES, all "int" in floating calculation is not allowed, so use "float" like 1.0f

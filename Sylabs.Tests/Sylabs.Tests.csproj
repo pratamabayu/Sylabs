@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{189B09C8-07D3-48C3-9C5A-EB8CB0FB2702}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Sylabs.Tests</RootNamespace>
+    <AssemblyName>Sylabs.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="..\Shaders\ColorEffect.fx">
+      <Link>Shaders\ColorEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Deferred-BasicEffect.fx">
+      <Link>Shaders\Deferred-BasicEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Deferred-LightingEffect.fx">
+      <Link>Shaders\Deferred-LightingEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Deferred-SkinnedEffect.fx">
+      <Link>Shaders\Deferred-SkinnedEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Deferred-TerrainEffect.fx">
+      <Link>Shaders\Deferred-TerrainEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\shader.fx">
+      <Link>Shaders\shader.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\SpriteBatchEffect.fx">
+      <Link>Shaders\SpriteBatchEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Stock-BasicEffect.fx">
+      <Link>Shaders\Stock-BasicEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Stock-SkinnedEffect.fx">
+      <Link>Shaders\Stock-SkinnedEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Forward-AlphaTestEffect.fx">
+      <Link>Shaders\Forward-AlphaTestEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Forward-BasicEffect.fx">
+      <Link>Shaders\Forward-BasicEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Forward-DualMapEffect.fx">
+      <Link>Shaders\Forward-DualMapEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Forward-ParticleEffect.fx">
+      <Link>Shaders\Forward-ParticleEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Forward-SkinnedEffect.fx">
+      <Link>Shaders\Forward-SkinnedEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\Forward-TerrainEffect.fx">
+      <Link>Shaders\Forward-TerrainEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-BloomCombine.fx">
+      <Link>Shaders\PP-BloomCombine.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-BloomExtract.fx">
+      <Link>Shaders\PP-BloomExtract.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Blur.fx">
+      <Link>Shaders\PP-Blur.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Chalk.fx">
+      <Link>Shaders\PP-Chalk.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-DepthOfField.fx">
+      <Link>Shaders\PP-DepthOfField.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Distortion.fx">
+      <Link>Shaders\PP-Distortion.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Emboss.fx">
+      <Link>Shaders\PP-Emboss.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Flip.fx">
+      <Link>Shaders\PP-Flip.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-GaussianBlur.fx">
+      <Link>Shaders\PP-GaussianBlur.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Grayscale.fx">
+      <Link>Shaders\PP-Grayscale.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Negative.fx">
+      <Link>Shaders\PP-Negative.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Ripple.fx">
+      <Link>Shaders\PP-Ripple.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Sharpen.fx">
+      <Link>Shaders\PP-Sharpen.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Wavy.fx">
+      <Link>Shaders\PP-Wavy.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\PP-Wiggle.fx">
+      <Link>Shaders\PP-Wiggle.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Note.txt" />
+    <None Include="..\Shaders\LPP\Deferred-BasicEffect.fx">
+      <Link>Shaders\LPP\Deferred-BasicEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\LPP\Deferred-ClearGBufferEffect.fx">
+      <Link>Shaders\LPP\Deferred-ClearGBufferEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\LPP\Deferred-LightingEffect.fx">
+      <Link>Shaders\LPP\Deferred-LightingEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\LPP\Deferred-ReconstructDepthEffect.fx">
+      <Link>Shaders\LPP\Deferred-ReconstructDepthEffect.fx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Shaders\LPP\Deferred-SkinnedEffect.fx">
+      <Link>Shaders\LPP\Deferred-SkinnedEffect.fx</Link>
+    </None>
+    <None Include="..\Shaders\LPP\Deferred-TerrainEffect.fx">
+      <Link>Shaders\LPP\Deferred-TerrainEffect.fx</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sylabs\Sylabs.csproj">
+      <Project>{9E0079CC-6F15-42AC-9F17-4E8AD7B951AE}</Project>
+      <Name>Sylabs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Shaders\" />
+    <Folder Include="Shaders\LPP\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
